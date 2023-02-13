@@ -241,6 +241,8 @@ i:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-wrap: nowrap;
+  padding-top: 150px;
 }
 
 #user {
@@ -273,8 +275,6 @@ i:hover {
 
 #badges {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   gap: 15px;
 }
 
@@ -290,4 +290,9 @@ i:hover {
 
 #badges button i:hover {
   color: black;
+}
+
+#settings {
+  display: flex;
+  flex-direction: column;
 }
