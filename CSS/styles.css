@@ -62,7 +62,7 @@ button {
   border: 2px solid var(--brown);
   border-radius: 5px;
   background-color: var(--green);
-  color: white;
+  color: black;
 }
 
 button:hover {
@@ -284,12 +284,16 @@ i:hover {
   font-size: 1.2em;
 }
 
+#badges button i {
+  color: black;
+}
+
 #badges button:hover {
   background-color: var(--red);
 }
 
 #badges button i:hover {
-  color: black;
+  color: white;
 }
 
 #settings {
