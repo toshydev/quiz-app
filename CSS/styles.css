@@ -1,13 +1,14 @@
 :root {
-    --brown: #5C4B51;
-    --green: #8CBEB2;
-    --beige: #8CBEB2;
-    --yellow: #F3B562;
-    --red: #F06060;
+  --brown: #5c4b51;
+  --green: #8cbeb2;
+  --beige: #f2ebbf;
+  --yellow: #f3b562;
+  --red: #f06060;
 }
 
 * {
   box-sizing: border-box;
+  _border: 2px solid green;
 }
 
 html {
@@ -22,24 +23,65 @@ body {
 }
 
 header {
-    background-color: var(--red);
-    width: 100vw;
-    border-bottom: 2px solid black;
-    position: fixed;
-    top: 0;
+  background-color: var(--red);
+  width: 100vw;
+  border-bottom: 2px solid var(--brown);
+  position: fixed;
+  top: 0;
 }
 
 h1 {
-    text-align: center;
+  text-align: center;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  background-color: var(--green);
+  width: 100vw;
+  height: 100px;
+  border-top: 2px solid var(--brown);
+}
+
+ul {
+  list-style: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+i {
+  color: white;
+}
+
+i:hover {
+  color: var(--yellow);
+}
+
+.nav-link {
+  font-size: 4em;
 }
 
 #header-link {
-    text-decoration: none;
-    font-weight: bold;
-    color: white;
-    text-shadow: 0 0 10px black;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 0 10px black;
 }
 
 #header-link:hover {
-    text-shadow: 0 0 10px white;
+  text-shadow: 0 0 10px white;
+}
+
+#nav-bar {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#nav-bar li {
+  text-align: center;
 }
