@@ -39,7 +39,7 @@ footer {
   bottom: 0;
   background-color: var(--green);
   width: 100vw;
-  height: 100px;
+  height: 125px;
   border-top: 2px solid var(--brown);
 }
 
@@ -64,6 +64,13 @@ i:hover {
 
 .nav-link {
   font-size: 4em;
+}
+
+.current-page i {
+    color: var(--yellow);
+    border: 4px solid var(--yellow);
+    padding: 5px;
+    border-radius: 10px;
 }
 
 #header-link {
