@@ -28,8 +28,16 @@ header {
 }
 
 h1 {
+    text-align: center;
+}
+
+#header-link {
+    text-decoration: none;
     font-weight: bold;
     color: white;
     text-shadow: 0 0 10px black;
-    text-align: center;
+}
+
+#header-link:hover {
+    text-shadow: 0 0 10px white;
 }
