@@ -142,6 +142,72 @@ i:hover {
   border-radius: 10px;
 }
 
+.toggle-checkbox-wrapper {
+  background-color: #fff;
+  border-radius: 25px;
+  padding: 24px;
+}
+
+.toggle-checkbox {
+  display: none;
+}
+
+.toggle-checkbox:checked + .slider::before {
+  background-color: grey;
+}
+.toggle-checkbox:checked + .slider::after {
+  background-color: black;
+  transform: translateX(16px);
+}
+
+.toggle-checkbox:checked ~ .slider > .toggle-switch.opt1 {
+  display: none;
+}
+.toggle-checkbox:checked ~ .slider > .toggle-switch.opt2 {
+  display: inline-block;
+}
+
+.slider {
+  position: relative;
+}
+
+.slider::before {
+  background: var(--beige);
+  border-radius: 34px;
+  bottom: 0;
+  content: "";
+  height: 24px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  width: 40px;
+}
+
+.slider::after {
+  background: var(--yellow);
+  border-radius: 50%;
+  bottom: 0;
+  content: "";
+  height: 16px;
+  left: 4px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  transition: 0.4s;
+  width: 16px;
+}
+
+.toggle-switch {
+  margin-left: 50px;
+}
+.toggle-switch.opt1 {
+  color: var(--green);
+}
+.toggle-switch.opt2 {
+  color: var(--brown);
+  display: none;
+}
+
 #header-link {
   text-decoration: none;
   font-weight: bold;
@@ -169,4 +235,59 @@ i:hover {
 
 #nav-bar li {
   text-align: center;
+}
+
+#profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#user {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 25px;
+  gap: 50px;
+  border-radius: 15px;
+}
+
+#user img {
+  background-color: var(--brown);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+#about {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+#about h3 {
+  align-self: flex-start;
+}
+
+#badges {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+#badges button {
+  width: 100px;
+  height: 35px;
+  font-size: 1.2em;
+}
+
+#badges button:hover {
+  background-color: var(--red);
+}
+
+#badges button i:hover {
+  color: black;
 }
