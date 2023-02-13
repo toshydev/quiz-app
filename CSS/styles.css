@@ -25,6 +25,8 @@ header {
     background-color: var(--red);
     width: 100vw;
     border-bottom: 2px solid black;
+    position: fixed;
+    top: 0;
 }
 
 h1 {
