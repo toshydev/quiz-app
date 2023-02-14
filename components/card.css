@@ -1,0 +1,48 @@
+.card {
+  width: 300px;
+  height: 200px;
+  background-color: var(--bg-card);
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  filter: drop-shadow(5px 5px 10px var(--bg-dark));
+  align-items: center;
+  transition: 0.5s;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card__bookmark {
+  position: absolute;
+  top: -2%;
+  right: -2%;
+  transform: scale(2);
+  color: var(--color-bookmark);
+}
+
+.card__heading {
+  padding: 20px;
+  text-align: center;
+  font-size: 1.1em;
+}
+
+.card__tag-list {
+  position: absolute;
+  bottom: 5%;
+  left: -10%;
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  align-self: flex-start;
+}
+
+.card__tag-list-item {
+  background-color: var(--bg-dark);
+  color: var(--color-light);
+  border-radius: 5px;
+  font-family: monospace;
+  font-weight: bold;
+  padding: 4px;
+}

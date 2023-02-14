@@ -1,0 +1,97 @@
+:root {
+  --bg-header: #f06060;
+  --bg-main: #f2ebbf;
+  --bg-footer: #8cbeb2;
+  --bg-button: #8cbeb2;
+  --bg-card: white;
+  --bg-dark: #5c4b51;
+  --bg-profile: white;
+  --color-light: white;
+  --color-dark: black;
+  --color-header: white;
+  --color-nav: white;
+  --color-bookmark: #f06060;
+  --highlight-color: #f3b562;
+
+  --brown: #5c4b51;
+  --green: #8cbeb2;
+  --beige: #f2ebbf;
+  --yellow: #f3b562;
+  --red: #f06060;
+}
+
+.dark {
+  --bg-header: #323232;
+  --bg-main: #212121;
+  --bg-footer: #323232;
+  --bg-button: #323232;
+  --bg-card: #464646;
+  --bg-dark: #5e5e5e;
+  --bg-profile: #373737;
+  --color-header: #ffffff;
+  --color-light: black;
+  --color-dark: white;
+  --color-nav: #dddddd;
+  --highlight-color: #b38e5c;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  font-family: "Raleway", sans-serif;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--bg-main);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}

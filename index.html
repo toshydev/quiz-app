@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Quiz App with coding related questions">
-    <link rel="stylesheet" href="CSS/styles.css" />
+    <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,58 +16,58 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <script src="js/script.js" defer></script>
+    <script src="script.js" defer></script>
     <title>Quiz App</title>
   </head>
   <body>
-    <header>
-      <h1><a id="header-link" aria-label="Go to main page" href="index.html">Quiz App</a></h1>
+    <header class="header">
+      <h1 class="header__heading"><a class="header__heading-link" aria-label="Go to main page" href="index.html">Quiz App</a></h1>
     </header>
-    <main id="all-cards">
+    <main >
         <section class="card">
-            <i class="fa fa-bookmark" data-js="bookmark" aria-hidden="true"></i>
-            <h2 class="question">What property controls the wrap behaviour?</h2>
-            <button type="button">Show Answer</button>
-            <ul class="tags">
-                <li>#html</li>
-                <li>#css</li>
-                <li>#flexbox</li>
+            <i class="card__bookmark fa fa-bookmark" data-js="bookmark" aria-hidden="true"></i>
+            <h2 class="card__heading">What property controls the wrap behaviour?</h2>
+            <button class="button button__big" type="button">Show Answer</button>
+            <ul class="card__tag-list">
+                <li class="card__tag-list-item">#html</li>
+                <li class="card__tag-list-item">#css</li>
+                <li class="card__tag-list-item">#flexbox</li>
             </ul>
         </section>
         <section class="card">
-            <i class="fa fa-bookmark" data-js="bookmark" aria-hidden="true"></i>
-            <h2 class="question">What JS object lets you store the app's state externally?</h2>
-            <button type="button">Show Answer</button>
-            <ul class="tags">
-                <li>#js</li>
-                <li>#react</li>
-                <li>#redux</li>
+            <i class="card__bookmark fa fa-bookmark" data-js="bookmark" aria-hidden="true"></i>
+            <h2 class="card__heading">What JS object lets you store the app's state externally?</h2>
+            <button class="button button__big" type="button">Show Answer</button>
+            <ul class="card__tag-list">
+                <li class="card__tag-list-item">#js</li>
+                <li class="card__tag-list-item">#react</li>
+                <li class="card__tag-list-item">#redux</li>
         </section>
         <section class="card">
-            <i class="fa fa-bookmark-o" data-js="bookmark" aria-hidden="true"></i></a>
-            <h2 class="question">What is the wildcard character in a search query?</h2>
-            <button type="button">Show Answer</button>
-            <ul class="tags">
-                <li>#mongodb</li>
-                <li>#postgresql</li>
-                <li>#sqlite</li>
+            <i class="card__bookmark fa fa-bookmark-o" data-js="bookmark" aria-hidden="true"></i></a>
+            <h2 class="card__heading">What is the wildcard character in a search query?</h2>
+            <button class="button button__big" type="button">Show Answer</button>
+            <ul class="card__tag-list">
+                <li class="card__tag-list-item">#mongodb</li>
+                <li class="card__tag-list-item">#postgresql</li>
+                <li class="card__tag-list-item">#sqlite</li>
         </section>
     </main>
     <footer>
-      <ul id="nav-bar">
+      <ul class="navbar">
         <li>
-          <a class="nav-link current-page"aria-label="Go to main page" href="index.html"
-            ><i class="fa fa-home" aria-hidden="true"></i
+          <a class="navbar__link--current"aria-label="Go to main page" href="index.html"
+            ><i class="navbar__link-icon fa fa-home" aria-hidden="true"></i
           ></a>
         </li>
         <li>
-          <a class="nav-link" aria-label="Go to bookmarked questions" href="bookmarks.html"
-            ><i class="fa fa-bookmark" aria-hidden="true"></i
+          <a class="navbar__link" aria-label="Go to bookmarked questions" href="bookmarks.html"
+            ><i class="navbar__link-icon fa fa-bookmark" aria-hidden="true"></i
           ></a>
         </li>
         <li>
-          <a class="nav-link" aria-label="Go to profile page" href="profile.html"
-            ><i class="fa fa-user" aria-hidden="true"></i
+          <a class="navbar__link" aria-label="Go to profile page" href="profile.html"
+            ><i class="navbar__link-icon fa fa-user" aria-hidden="true"></i
           ></a>
         </li>
       </ul>
