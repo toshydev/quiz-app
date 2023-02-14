@@ -16,15 +16,16 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <script src="js/script.js" defer></script>
     <title>Quiz App</title>
   </head>
   <body>
     <header>
       <h1><a id="header-link" aria-label="Go to main page" href="index.html">Quiz App</a></h1>
     </header>
-    <main>
+    <main id="bookmarked-cards">
         <section class="card">
-            <a class="bookmark" aria-label="remove card from bookmarks"><i class="fa fa-bookmark" aria-hidden="true"></i></a>
+            <i class="fa fa-bookmark" data-js="bookmark" aria-hidden="true"></i>
             <h2 class="question">What property controls the wrap behaviour?</h2>
             <button type="button">Show Answer</button>
             <ul class="tags">
@@ -34,7 +35,7 @@
             </ul>
         </section>
         <section class="card">
-            <a class="bookmark" aria-label="remove card from bookmarks"><i class="fa fa-bookmark" aria-hidden="true"></i></a>
+            <i class="fa fa-bookmark" data-js="bookmark" aria-hidden="true"></i>
             <h2 class="question">What JS object lets you store the app's state externally?</h2>
             <button type="button">Show Answer</button>
             <ul class="tags">
