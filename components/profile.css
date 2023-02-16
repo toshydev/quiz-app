@@ -1,0 +1,42 @@
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.profile__user {
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-profile);
+  padding: 25px;
+  gap: 50px;
+  border-radius: 15px;
+  color: var(--color-dark);
+}
+
+.profile__user-picture {
+  background-color: var(--bg-dark);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.profile__user-card {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-profile);
+  border-radius: 15px;
+  padding: 20px;
+  color: var(--color-dark);
+}
+
+.profile__user-card-heading {
+  align-self: flex-start;
+  color: var(--color-dark);
+}
+
+.profile__user-settings {
+  display: flex;
+  flex-direction: column;
+}

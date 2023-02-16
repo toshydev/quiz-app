@@ -1,0 +1,33 @@
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4em;
+}
+
+.navbar__link {
+  color: var(--color-light);
+}
+
+.navbar__link-icon {
+  transition: 0.25s;
+  color: var(--color-nav);
+}
+
+.navbar__link-icon:hover {
+  color: var(--yellow);
+  transform: scale(1.2);
+}
+
+.navbar__link--current i {
+  color: var(--highlight-color);
+  padding: 5px;
+  border-radius: 10px;
+}
