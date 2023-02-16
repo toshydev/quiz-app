@@ -11,6 +11,7 @@
   --color-header: white;
   --color-nav: white;
   --color-bookmark: #f06060;
+  --color-shadow: #5c4b51;
   --highlight-color: #f3b562;
 
   --brown: #5c4b51;
@@ -32,6 +33,7 @@
   --color-light: black;
   --color-dark: white;
   --color-nav: #dddddd;
+  --color-shadow: black;
   --highlight-color: #b38e5c;
 }
 
