@@ -32,7 +32,7 @@
     </header>
     <main>
       <section class="form">
-        <form class="form__body" aria-label="Add your own questions">
+        <form class="form__body" aria-label="Add your own questions" data-js="form">
           <fieldset class="form__body-fields">
             <legend class="form__body-description">
               Add your own question
@@ -41,7 +41,8 @@
               >Your question:</label
             >
             <textarea
-            class="form__body-textarea"
+            data-js="question"
+              class="form__body-textarea"
               name="question"
               id="question"
               cols="30"
@@ -51,7 +52,8 @@
             ></textarea>
             <label class="form__body-label" for="answer">Your answer:</label>
             <textarea
-            class="form__body-textarea"
+            data-js="answer"
+              class="form__body-textarea"
               name="answer"
               id="answer"
               cols="30"
@@ -60,7 +62,7 @@
               placeholder="e.g. 42"
             ></textarea>
             <label class="form__body-label" for="tag">Tag:</label>
-            <input class="form__body-input" type="text" name="tag" id="tag" />
+            <input data-js="tag" class="form__body-input" type="text" name="tag" id="tag" />
           </fieldset>
           <button
             class="button button_lg form__body-submit"
@@ -71,8 +73,7 @@
           </button>
         </form>
       </section>
-
-      <section class="card-container"></section>
+      <section class="card-container" data-js="card-container"></section>
     </main>
     <footer>
       <ul class="navbar">
