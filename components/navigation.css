@@ -31,3 +31,7 @@
   padding: 5px;
   border-radius: 10px;
 }
+
+.navbar__link--current i:hover {
+  color: var(--highlight-color);
+}
