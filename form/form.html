@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Quiz App with coding related questions">
+    <meta name="description" content="Quiz App with coding related questions" />
     <link rel="stylesheet" href="../styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,32 +21,90 @@
   </head>
   <body>
     <header class="header">
-      <h1 class="header__heading"><a class="header__heading-link" aria-label="Go to main page" href="/index.html">Quiz App</a></h1>
+      <h1 class="header__heading">
+        <a
+          class="header__heading-link"
+          aria-label="Go to main page"
+          href="/index.html"
+          >Quiz App</a
+        >
+      </h1>
     </header>
-    <main >
+    <main>
+      <section class="form">
+        <form class="form__body" aria-label="Add your own questions">
+          <fieldset class="form__body-fields">
+            <legend class="form__body-description">
+              Add your own question
+            </legend>
+            <label class="form__body-label" for="question"
+              >Your question:</label
+            >
+            <textarea
+            class="form__body-textarea"
+              name="question"
+              id="question"
+              cols="30"
+              rows="3"
+              required
+              placeholder="e.g. How many halftones in an octave?"
+            ></textarea>
+            <label class="form__body-label" for="answer">Your answer:</label>
+            <textarea
+            class="form__body-textarea"
+              name="answer"
+              id="answer"
+              cols="30"
+              rows="2"
+              required
+              placeholder="e.g. 42"
+            ></textarea>
+            <label class="form__body-label" for="tag">Tag:</label>
+            <input class="form__body-input" type="text" name="tag" id="tag" />
+          </fieldset>
+          <button
+            class="button button_lg form__body-submit"
+            type="submit"
+            aria-label="Post your new question"
+          >
+            Submit
+          </button>
+        </form>
+      </section>
 
-        <section class="card-container">
-        </section>
+      <section class="card-container"></section>
     </main>
     <footer>
       <ul class="navbar">
         <li>
-          <a class="navbar__link"aria-label="Go to main page" href="/index.html"
+          <a
+            class="navbar__link"
+            aria-label="Go to main page"
+            href="/index.html"
             ><i class="navbar__link-icon fa fa-home" aria-hidden="true"></i
           ></a>
         </li>
         <li>
-          <a class="navbar__link" aria-label="Go to bookmarked questions" href="/bookmarks/bookmarks.html"
+          <a
+            class="navbar__link"
+            aria-label="Go to bookmarked questions"
+            href="/bookmarks/bookmarks.html"
             ><i class="navbar__link-icon fa fa-bookmark" aria-hidden="true"></i
           ></a>
         </li>
         <li>
-            <a class="navbar__link--current" aria-label="Go to forms page" href="#"
-              ><i class="navbar__link-icon fa fa-plus" aria-hidden="true"></i
-            ></a>
-          </li>
+          <a
+            class="navbar__link--current"
+            aria-label="Go to forms page"
+            href="#"
+            ><i class="navbar__link-icon fa fa-plus" aria-hidden="true"></i
+          ></a>
+        </li>
         <li>
-          <a class="navbar__link" aria-label="Go to profile page" href="/profile/profile.html"
+          <a
+            class="navbar__link"
+            aria-label="Go to profile page"
+            href="/profile/profile.html"
             ><i class="navbar__link-icon fa fa-user" aria-hidden="true"></i
           ></a>
         </li>

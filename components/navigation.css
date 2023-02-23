@@ -9,7 +9,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 4em;
+  font-size: 3em;
 }
 
 .navbar__link {
@@ -28,7 +28,6 @@
 
 .navbar__link--current i {
   color: var(--highlight-color);
-  padding: 5px;
   border-radius: 10px;
 }
 
