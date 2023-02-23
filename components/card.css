@@ -41,7 +41,7 @@
   margin: 1rem 0;
   width: 80%;
   height: 30%;
-  background: var(--bg-dark);
+  background: var(--bg-answer);
   color: var(--color-dark);
   border-radius: 8px;
 }
