@@ -1,10 +1,11 @@
 @import "global.css";
-@import "components/button.css";
-@import "components/card.css";
-@import "components/header.css";
-@import "components/navigation.css";
-@import "components/profile.css";
-@import "components/darkmode.css";
+@import "/components/button.css";
+@import "/components/card.css";
+@import "/components/header.css";
+@import "/components/navigation.css";
+@import "/components/profile.css";
+@import "/components/darkmode.css";
+@import "/components/form.css";
 
 main {
   position: absolute;
