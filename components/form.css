@@ -3,13 +3,12 @@
   flex-direction: column;
   align-items: center;
   gap: 50px;
-  padding-bottom: 50px;
   color: var(--color-dark);
 }
 
 .form__body {
   width: 300px;
-  height: 400px;
+  height: 94%;
   background-color: var(--bg-card);
   display: flex;
   flex-direction: column;
@@ -32,17 +31,35 @@
 }
 
 .form__body-textarea {
-  margin-bottom: 2rem;
   border-radius: 5px;
   background-color: var(--bg-answer);
   border: 2px solid var(--bg-dark);
 }
 
-.form__body-input {
-  margin-bottom: 2rem;
+.form__body-textarea:focus {
+  outline: 3px dashed var(--highlight-color);
   border-radius: 5px;
+  border-color: transparent;
+}
+
+.form__body-textarea-counter {
+  color: var(--bg-button);
+  margin-bottom: 1rem;
+  align-self: flex-end;
+  height: 1rem;
+}
+
+.form__body-input {
+  border-radius: 5px;
+  margin-bottom: 1rem;
   background-color: var(--bg-answer);
   border: 2px solid var(--bg-dark);
+}
+
+.form__body-input:focus {
+  outline: 3px dashed var(--highlight-color);
+  border-radius: 5px;
+  border-color: transparent;
 }
 
 .form__body-submit {
