@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Quiz App with coding related questions">
+    <meta name="description" content="Quiz App with coding related questions" />
     <link rel="stylesheet" href="../styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,55 +16,62 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <script src="script.js" defer></script>
+    <script type="module">
+      import "../bookmarks.js";
+    </script>
+    <script type="module">
+      import "../script.js";
+    </script>
+    <script type="module">
+      import "../user.js";
+    </script>
     <title>Quiz App</title>
   </head>
   <body>
     <header class="header">
-      <h1 class="header__heading"><a class="header__heading-link" aria-label="Go to main page" href="/index.html">Quiz App</a></h1>
+      <h1 class="header__heading">
+        <a
+          class="header__heading-link"
+          aria-label="Go to main page"
+          href="/index.html"
+          >Quiz App</a
+        >
+      </h1>
     </header>
     <main>
-      <section class="card-container">
-      <section class="card">
-          <i class="card__bookmark fa fa-bookmark" data-js="bookmark" aria-hidden="true"></i>
-          <h2 class="card__heading">What property controls the wrap behaviour?</h2>
-          <button class="button button__big" type="button">Show Answer</button>
-          <ul class="card__tag-list">
-              <li class="card__tag-list-item">#html</li>
-              <li class="card__tag-list-item">#css</li>
-              <li class="card__tag-list-item">#flexbox</li>
-          </ul>
-      </section>
-      <section class="card">
-          <i class="card__bookmark fa fa-bookmark" data-js="bookmark" aria-hidden="true"></i>
-          <h2 class="card__heading">What JS object lets you store the app's state externally?</h2>
-          <button class="button button__big" type="button">Show Answer</button>
-          <ul class="card__tag-list">
-              <li class="card__tag-list-item">#js</li>
-              <li class="card__tag-list-item">#react</li>
-              <li class="card__tag-list-item">#redux</li>
-      </section>
-    </section>
-  </main>
+      <section class="card-container"></section>
+    </main>
     <footer>
       <ul class="navbar">
         <li>
-          <a class="navbar__link"aria-label="Go to main page" href="/index.html"
+          <a
+            class="navbar__link"
+            aria-label="Go to main page"
+            href="/index.html"
             ><i class="navbar__link-icon fa fa-home" aria-hidden="true"></i
           ></a>
         </li>
         <li>
-          <a class="navbar__link--current" aria-label="Go to bookmarked questions" href="#"
+          <a
+            class="navbar__link--current"
+            aria-label="Go to bookmarked questions"
+            href="#"
             ><i class="navbar__link-icon fa fa-bookmark" aria-hidden="true"></i
           ></a>
         </li>
         <li>
-          <a class="navbar__link" aria-label="Go to forms page" href="/form/form.html"
+          <a
+            class="navbar__link"
+            aria-label="Go to forms page"
+            href="/form/form.html"
             ><i class="navbar__link-icon fa fa-plus" aria-hidden="true"></i
           ></a>
         </li>
         <li>
-          <a class="navbar__link" aria-label="Go to profile page" href="/profile/profile.html"
+          <a
+            class="navbar__link"
+            aria-label="Go to profile page"
+            href="/profile/profile.html"
             ><i class="navbar__link-icon fa fa-user" aria-hidden="true"></i
           ></a>
         </li>

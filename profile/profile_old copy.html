@@ -16,8 +16,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <script type="module"> import "../js/profile.js";</script>
-    <script type="module"> import "../js/user.js";</script>
+    <script src="script.js" defer></script>
     <title>Quiz App</title>
   </head>
   <body>
@@ -31,8 +30,68 @@
         >
       </h1>
     </header>
-    <main>
-
+    <main class="profile">
+      <section class="profile__user">
+        <img
+          class="profile__user-picture"
+          width="100px"
+          src="https://snekhome.click/assets/images/snake.png"
+          alt="Snake Logo"
+        />
+        <h2>Toshy Moshy</h2>
+      </section>
+      <section class="profile__user-card">
+        <h3 class="profile__user-card-heading">About me:</h3>
+        <p>I like music, coding and nature stuff...</p>
+      </section>
+      <section>
+        <button
+          class="button button__small"
+          type="button"
+          role="Go to questions"
+        >
+          <a
+            class="button__link"
+            href="/index.html"
+            aria-label="Go to questions page"
+            title="Go to index"
+            ><i class="fa fa-question-circle" aria-hidden="true"> 12</i></a
+          >
+        </button>
+        <button
+          class="button button__small"
+          type="button"
+          role="Got to bookmarks"
+        >
+          <a
+            class="button__link"
+            href="/bookmarks/bookmarks.html"
+            aria-label="Go to bookmarks"
+            title="Go to bookmarks"
+            ><i class="fa fa-bookmark" aria-hidden="true"> 2</i></a
+          >
+        </button>
+        <button class="button button__small" type="button" role="Go to GitHub">
+          <a
+            class="button__link"
+            href="https://github.com/toshydev"
+            target="_blank"
+            aria-label="Go to GitHub"
+            title="Go to GitHub"
+            ><i class="fa fa-comments-o" aria-hidden="true"> Social</i></a
+          >
+        </button>
+      </section>
+      <section>
+        <h3 class="profile__user-card-heading">Settings</h3>
+        <div class="toggle-checkbox-wrapper">
+          <input class="toggle-checkbox" type="checkbox" id="toggle" />
+          <label class="slider" for="toggle">
+            <span class="toggle-switch opt1">Light Mode</span>
+            <span class="toggle-switch opt2">Dark Mode</span>
+          </label>
+        </div>
+      </section>
     </main>
     <footer>
       <ul class="navbar">
