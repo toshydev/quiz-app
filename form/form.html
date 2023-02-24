@@ -16,8 +16,9 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <script type="module"> import "../js/form.js";</script>
-    <script type="module"> import "../js/user.js";</script>
+    <script type="module">
+      import "../form.js";
+    </script>
     <title>Quiz App</title>
   </head>
   <body>
@@ -33,7 +34,7 @@
     </header>
     <main>
       <section class="form">
-        <form
+        <!-- <form
           class="form__body"
           aria-label="Add your own questions"
           data-js="form"
@@ -78,14 +79,17 @@
               aria-label="answer character counter"
               data-js="answer-counter"
             ></aside>
-            <label class="form__body-label" for="tag">Tag:</label>
-            <input
-              data-js="tag"
-              class="form__body-input"
-              type="text"
-              name="tag"
-              id="tag"
-            />
+            <label class="form__body-label" for="tag">Tags:</label>
+            <div class="form__body-tag-container">
+              <input
+                data-js="tag"
+                class="form__body-input"
+                type="text"
+                name="tag"
+                id="tag"
+              />
+              <button class="button" aria-label="add another tag" data-js="tag-add"><i class="fa fa-plus" aria-hidden="true"></i></button>
+            </div>
           </fieldset>
           <button
             class="button button_lg form__body-submit"
@@ -94,7 +98,7 @@
           >
             Submit
           </button>
-        </form>
+        </form> -->
       </section>
       <section class="card-container" data-js="card-container"></section>
     </main>
