@@ -8,7 +8,7 @@
 
 .card {
   width: 300px;
-  height: 300px;
+  height: 325px;
   background-color: var(--bg-card);
   display: flex;
   flex-direction: column;
@@ -25,9 +25,9 @@
 
 .card__bookmark {
   position: absolute;
-  top: -2%;
-  right: -2%;
-  transform: scale(2);
+  top: 0;
+  right: 10%;
+  transform: scale(3);
   color: var(--color-bookmark);
 }
 
@@ -59,7 +59,6 @@
   list-style: none;
   display: flex;
   gap: 10px;
-  align-self: flex-start;
 }
 
 .card__tag-list-item {

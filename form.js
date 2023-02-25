@@ -1,10 +1,10 @@
-const userCards = [
+export const userCards = [
   {
     id: 1,
     question: "What property controls the wrap behaviour?",
     answer: "flex-wrap: nowrap/wrap/wrap-reverse",
     tags: ["html", "css", "flexbox"],
-    bookmarked: false,
+    bookmarked: true,
   },
   {
     id: 2,
@@ -28,14 +28,89 @@ window.addEventListener("load", () => {
   }
 });
 
-renderForm();
+renderForm(".form");
 
-function renderForm() {
-  const formContainer = document.querySelector(".form");
+function renderForm(container) {
+  // Create container reference
+  const formContainer = document.querySelector(container);
+
+  // Create form element & add class & add attributes
   const form = document.createElement("form");
   form.classList.add("form__body");
   form.setAttribute("aria-label", "Add your own questions");
-  form.setAttribute("data-js", "form");
+
+  // Create fieldset, legent elements & add classes
+  const fieldset = document.createElement("fieldset");
+  fieldset.classList.add("form__body-fields");
+  const legend = document.createElement("legend");
+  legend.classList.add("form__body-description");
+  legend.textContent = "Add your own question";
+
+  // Create question label & add classes, attributes
+  const questionLabel = document.createElement("label");
+  questionLabel.classList.add("form__body-label");
+  questionLabel.setAttribute("for", "question");
+  questionLabel.textContent = "Your question:";
+
+  // Create question textarea & add classes, attributes
+  const questionText = document.createElement("textarea");
+  questionText.classList.add("form__body-textarea");
+  questionText.setAttribute(
+    "placeholder",
+    "e.g. How many halftones in an octave?"
+  );
+  questionText.setAttribute("id", "question");
+  questionText.setAttribute("name", "question");
+  questionText.setAttribute("required", "");
+  questionText.setAttribute("maxlength", "150");
+  questionText.setAttribute("cols", "30");
+  questionText.setAttribute("rows", "3");
+
+  // Create question character counter
+  const questionCounter = document.createElement("aside");
+  questionCounter.classList.add("form__body-textarea-counter");
+  questionCounter.setAttribute("aria-label", "question character counter");
+
+  // Create answer label & add classes, attributes
+  const answerLabel = document.createElement("label");
+  answerLabel.classList.add("form__body-label");
+  answerLabel.setAttribute("for", "answer");
+  answerLabel.textContent = "Your answer:";
+
+  // Create answer textarea & add classes, attributes
+  const answerText = document.createElement("textarea");
+  answerText.classList.add("form__body-textarea");
+  answerText.setAttribute("placeholder", "e.g. 42");
+  answerText.setAttribute("id", "answer");
+  answerText.setAttribute("name", "answer");
+  answerText.setAttribute("required", "");
+  answerText.setAttribute("maxlength", "150");
+  answerText.setAttribute("cols", "30");
+  answerText.setAttribute("rows", "2");
+
+  // Create answer character counter
+  const answerCounter = document.createElement("aside");
+  answerCounter.classList.add("form__body-textarea-counter");
+  answerCounter.setAttribute("aria-label", "answer character counter");
+
+  const html = `<label class="form__body-label" for="tag">Tag:</label>
+<div class="form__body-tag-container">
+  <input
+    data-js="tag"
+    class="form__body-input"
+    type="text"
+    name="tag-0"
+    id="tag"
+  /><button type="button" class="button" aria-label="add another tag" data-js="tag-add"><i class="fa fa-plus" aria-hidden="true"></i></button>
+</div>
+</fieldset>
+<button
+class="button button_lg form__body-submit"
+type="submit"
+aria-label="Post your new question"
+>
+Submit
+</button>`;
 
   form.innerHTML = `
 <fieldset class="form__body-fields">
@@ -86,8 +161,7 @@ function renderForm() {
     type="text"
     name="tag-0"
     id="tag"
-  />
-  <button type="button" class="button" aria-label="add another tag" data-js="tag-add"><i class="fa fa-plus" aria-hidden="true"></i></button>
+  /><button type="button" class="button" aria-label="add another tag" data-js="tag-add"><i class="fa fa-plus" aria-hidden="true"></i></button>
 </div>
 </fieldset>
 <button
@@ -99,11 +173,11 @@ Submit
 </button>
   `;
 
-  const questionInput = form.querySelector('[data-js="question"]');
+  /* const questionInput = form.querySelector('[data-js="question"]');
   const questionCounter = form.querySelector('[data-js="question-counter"]');
   const answerInput = form.querySelector('[data-js="answer"]');
   const answerCounter = form.querySelector('[data-js="answer-counter"]');
-  const tagAddButton = form.querySelector('[data-js="tag-add"]');
+  const tagAddButton = form.querySelector('[data-js="tag-add"]'); */
 
   questionInput.addEventListener("input", (event) => {
     countInput(questionCounter, event.target.value, event.target.maxLength);
@@ -127,6 +201,38 @@ Submit
   formContainer.append(form);
   console.log(data);
 }
+
+function createTagInput(counter) {
+  const tagContainer = document.querySelector(".form__body-tag-container");
+  const input = document.createElement("input");
+  input.classList.add("form__body-input");
+  input.setAttribute("data-js", "tag");
+  input.setAttribute("type", "text");
+  input.setAttribute("name", `tag-${counter}`);
+
+  const button = document.createElement("button");
+  button.classList.add("button");
+  button.setAttribute("aria-label", "add another tag");
+  button.setAttribute("data-js", "tag-add");
+  button.setAttribute("type", "button");
+  button.innerHTML = `<i class="fa fa-plus" aria-hidden="true"></i>`;
+  button.addEventListener("click", createTagInput);
+  tagContainer.append(input, button);
+}
+
+/* 
+<label class="form__body-label" for="tag">Tag:</label>
+<div class="form__body-tag-container">
+  <input
+    data-js="tag"
+    class="form__body-input"
+    type="text"
+    name="tag-0"
+    id="tag"
+  />
+  <button type="button" class="button" aria-label="add another tag" data-js="tag-add"><i class="fa fa-plus" aria-hidden="true"></i></button>
+
+*/
 
 /* const form = document.querySelector('[data-js="form"]');
 const questionInput = document.querySelector('[data-js="question"]');
@@ -155,7 +261,7 @@ form.addEventListener("submit", (event) => {
   form.reset();
 }); */
 
-function createCard(data) {
+/* function createCard(data) {
   const cardSection = document.querySelector('[data-js="card-container"]');
   const card = document.createElement("section");
   card.classList.add("card");
@@ -204,7 +310,7 @@ function createCard(data) {
   };
   userCards.push(newCard);
   cardSection.append(card);
-}
+} */
 
 function countInput(counter, text, maxLength) {
   if (text.length < maxLength) {
@@ -215,24 +321,4 @@ function countInput(counter, text, maxLength) {
     counter.style.color = "var(--color-bookmark)";
     counter.textContent = `Maximum length: ${text.length}/${maxLength}`;
   }
-}
-
-function createTagInput(counter) {
-  const tagContainer = document.querySelector(".form__body-tag-container");
-  const input = document.createElement("input");
-  input.classList.add("form__body-input");
-  input.setAttribute("data-js", "tag");
-  input.setAttribute("type", "text");
-  input.setAttribute("name", `tag-${counter}`);
-
-  const button = document.createElement("button");
-  button.classList.add("button");
-  button.setAttribute("aria-label", "add another tag");
-  button.setAttribute("data-js", "tag-add");
-  button.setAttribute("type", "button");
-  button.innerHTML = `
-  <i class="fa fa-plus" aria-hidden="true"></i>
-  `;
-  button.addEventListener("click", createTagInput);
-  tagContainer.append(input, button);
 }

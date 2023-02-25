@@ -1,12 +1,20 @@
-import { cards } from "./user.js";
+import { user } from "./user.js";
+import { populateLocalStorage, createCard, buildCardDeck } from "./functions.js";
+
+populateLocalStorage(user);
+const cards = buildCardDeck();
 
 window.addEventListener("load", () => {
-  if (localStorage.getItem("darkmode") == "true") {
+  if (localStorage.getItem("darkmode") === "true") {
     document.querySelector("body").classList.add("dark");
   }
 });
 
-renderAllCards();
+for (const card of cards) {
+  createCard(card, ".card-container");
+}
+
+/* renderAllCards();
 
 function renderAllCards() {
   const cardContainer = document.querySelector(".card-container");
@@ -65,3 +73,4 @@ function renderAllCards() {
 }
 
 export const allCards = cards;
+ */
