@@ -1,12 +1,16 @@
-import { cards } from "./user.js";
+// Check for darkmode in localStorage and move switch if true
+window.addEventListener("load", () => {
+  if (localStorage.getItem("darkmode") === "true") {
+    document.querySelector("body").classList.add("dark");
+    document.getElementById("toggle").checked = true;
+  }
+});
 
-console.log(cards);
+// render profile in main element
+renderProfile("main");
 
-const main = document.querySelector("main");
-
-renderProfile();
-
-function renderProfile() {
+function renderProfile(query) {
+  const profileContainer = document.querySelector(query);
   const profile = document.createElement("section");
   profile.classList.add("profile");
   if (localStorage.getItem("darkmode") === "true") {
@@ -20,11 +24,11 @@ function renderProfile() {
     src="../assets/images/snek.png"
     alt="profile picture"
   />
-  <h2>playerunknown</h2>
+  <h2>${localStorage.getItem("userName")}</h2>
 </section>
 <section class="profile__user-card">
   <h3 class="profile__user-card-heading">About me:</h3>
-  <p>Nothing to see here...</p>
+  <p>${localStorage.getItem("description")}</p>
 </section>
 <section>
   <button
@@ -37,9 +41,9 @@ function renderProfile() {
       href="/index.html"
       aria-label="Go to questions page"
       title="Go to index"
-      ><i class="fa fa-question-circle" aria-hidden="true"> ${
-        cards.length
-      }</i></a
+      ><i class="fa fa-question-circle" aria-hidden="true"> ${localStorage.getItem(
+        "cardCount"
+      )}</i></a
     >
   </button>
   <button
@@ -52,15 +56,13 @@ function renderProfile() {
       href="/bookmarks/bookmarks.html"
       aria-label="Go to bookmarks"
       title="Go to bookmarks"
-      ><i class="fa fa-bookmark" aria-hidden="true"> ${
-        cards.filter((card) => card.bookmarked).length
-      }</i></a
+      ><i class="fa fa-bookmark" aria-hidden="true">---</i></a
     >
   </button>
   <button class="button button__small" type="button" role="Go to GitHub">
     <a
       class="button__link"
-      href="${localStorage.social}"
+      href="${localStorage.getItem("social")}"
       target="_blank"
       aria-label="Go to GitHub"
       title="Go to GitHub"
@@ -79,15 +81,8 @@ function renderProfile() {
   </div>
 </section>
   `;
-  main.append(profile);
+  profileContainer.append(profile);
 }
-
-window.addEventListener("load", () => {
-  if (localStorage.getItem("darkmode") === "true") {
-    document.querySelector("body").classList.add("dark");
-    document.getElementById("toggle").checked = true;
-  }
-});
 
 const darkModeSwitch = document.querySelector("#toggle");
 darkModeSwitch.addEventListener("click", () => {

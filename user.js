@@ -3,13 +3,14 @@ export const user = {
   description: "Nothing to see here...",
   darkmode: "false",
   picture: "./assets/images/snek.png",
+  social: "https://quiz-app-toshydev.vercel.app/",
   cards: [
     {
       id: 1,
       question: "What property controls the wrap behaviour?",
       answer: "flex-wrap: nowrap/wrap/wrap-reverse",
       tags: ["html", "css", "flexbox"],
-      bookmarked: false,
+      bookmarked: true,
     },
     {
       id: 2,

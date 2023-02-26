@@ -44,12 +44,14 @@
 .form__body-textarea-counter {
   color: var(--bg-button);
   margin-bottom: 1rem;
+  margin-right: 1rem;
   align-self: flex-end;
   height: 1rem;
 }
 
 .form__body-tag-container {
   width: 100%;
+  text-align: center;
 }
 
 .form__body-input {
