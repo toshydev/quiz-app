@@ -241,6 +241,13 @@ export function renderCards(query, bookmarked = false, editor = false) {
         bookmark.classList.add("fa-bookmark");
         localStorage.setItem(`${localBookmarked}`, "true");
       } else {
+        if (bookmarked === true) {
+          bookmark.classList.remove("fa-bookmark");
+          bookmark.classList.add("fa-bookmark-o");
+          localStorage.setItem(`${localBookmarked}`, "false");
+          cardContainer.innerHTML = "";
+          renderCards(".card-container", true, false);
+        }
         bookmark.classList.remove("fa-bookmark");
         bookmark.classList.add("fa-bookmark-o");
         localStorage.setItem(`${localBookmarked}`, "false");
