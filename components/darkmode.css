@@ -49,7 +49,7 @@
   margin: auto;
   position: absolute;
   top: 0;
-  transition: 0.4s;
+  transition: transform 0.4s;
   width: 16px;
 }
 
