@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   gap: 50px;
-  padding-bottom: 150px;
+  padding-bottom: 50px;
 }
 
 .card {
@@ -29,6 +29,12 @@
   right: 10%;
   transform: scale(3);
   color: var(--color-bookmark);
+}
+
+.card__delete-button {
+  position: absolute;
+  top: 2%;
+  left: 2%;
 }
 
 .card__heading {

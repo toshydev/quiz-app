@@ -9,4 +9,4 @@ window.addEventListener("load", () => {
 
 /* Render only bookmarked cards with editor mode off 
 Cards will be refreshed on reload */
-renderCards(".card-container", true, false);
+renderCards(true, false);

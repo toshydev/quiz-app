@@ -7,18 +7,29 @@
 
 .profile__user {
   display: flex;
+  width: 90%;
   align-items: center;
   background-color: var(--bg-profile);
   padding: 25px;
   gap: 50px;
   border-radius: 15px;
   color: var(--color-dark);
+  position: relative;
 }
 
 .profile__user-picture {
   background-color: var(--bg-dark);
   padding: 5px;
   border-radius: 5px;
+}
+
+.profie__picture-button {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 7%;
+  left: 3%;
+  text-align: center;
 }
 
 .profile__user-card {
@@ -39,4 +50,8 @@
 .profile__user-settings {
   display: flex;
   flex-direction: column;
+}
+
+#file-upload {
+  display: none;
 }

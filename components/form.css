@@ -49,17 +49,12 @@
   height: 1rem;
 }
 
-.form__body-tag-container {
-  width: 100%;
-  text-align: center;
-}
-
 .form__body-input {
   border-radius: 5px;
   margin-bottom: 1rem;
   background-color: var(--bg-answer);
   border: 2px solid var(--bg-dark);
-  width: 85%;
+  width: 90%;
 }
 
 .form__body-input:focus {
