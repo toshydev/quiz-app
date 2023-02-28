@@ -1,4 +1,4 @@
-import { addCard, renderCards, countInput, renderForm } from "./functions.js";
+import { renderCards, renderForm } from "./functions.js";
 
 // Check for darkmode in localStorage
 window.addEventListener("load", () => {
@@ -11,4 +11,4 @@ window.addEventListener("load", () => {
 renderForm(".form");
 
 // Render all cards from localStorage with editor mode (to be implemented)
-renderCards(".card-container", false, true);
+renderCards(false, true);

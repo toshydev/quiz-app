@@ -1,7 +1,7 @@
-import { user } from "./user.js";
+import { quizApp } from "./user.js";
 import { populateLocalStorage, renderCards } from "./functions.js";
 
-populateLocalStorage(user);
+populateLocalStorage(quizApp);
 
 // Check for darkmode in localStorage
 window.addEventListener("load", () => {
@@ -11,4 +11,4 @@ window.addEventListener("load", () => {
 });
 
 /* Render all cards with editor mode off */
-renderCards(".card-container", false, false);
+renderCards(false, false);

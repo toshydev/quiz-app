@@ -18,6 +18,7 @@ function renderProfile(query) {
   }
   profile.innerHTML = `
   <section class="profile__user">
+  <label class="button profie__picture-button" for="file-upload"><input id="file-upload" type="file"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></label>
   <img
     class="profile__user-picture"
     width="100px"
@@ -81,6 +82,7 @@ function renderProfile(query) {
   </div>
 </section>
   `;
+
   profileContainer.append(profile);
 }
 
