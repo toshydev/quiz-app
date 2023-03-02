@@ -1,4 +1,4 @@
-import { renderCards, renderForm } from "./functions.js";
+import { renderCards, renderForm, deletePrompt } from "./functions.js";
 
 // Check for darkmode in localStorage
 window.addEventListener("load", () => {
@@ -7,6 +7,7 @@ window.addEventListener("load", () => {
   }
 });
 
+deletePrompt("test");
 // Render form in form container
 renderForm(".form");
 

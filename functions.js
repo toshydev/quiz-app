@@ -282,9 +282,12 @@ export function renderCards(bookmarked = false, editor = false) {
 
     // Add event listener to deleteButton
     deleteButton.addEventListener("click", () => {
-      cards.pop(cardItem);
-      cardContainer.innerHTML = "";
-      renderCards(false, true);
+      if (deletePrompt(cardItem.id)) {
+        data[0].cards = cards.filter((card) => card.id !== cardItem.id);
+        updateData(data);
+        cardContainer.innerHTML = "";
+        renderCards(false, true);
+      }
     });
 
     // Create question heading & add class
@@ -378,4 +381,44 @@ export function createTagInput(counter) {
   });
   tagContainer.append(input, button);
   counter++;
+}
+
+export function deletePrompt(item) {
+  const container = document.createElement("section");
+  container.classList.add("prompt__container");
+
+  const heading = document.createElement("h2");
+  heading.classList.add("prompt__question");
+  heading.textContent = item;
+
+  // Create accept button and icon
+  const acceptButton = document.createElement("button");
+  acceptButton.classList.add("button", "prompt__accept");
+
+  const acceptIcon = document.createElement("i");
+  acceptIcon.classList.add("fa", "fa-check");
+  acceptIcon.setAttribute("aria-hidden", "true");
+  acceptButton.append(acceptIcon);
+
+  // Create window close button and icon
+  const closeButton = document.createElement("button");
+  closeButton.classList.add("button", "prompt__close");
+
+  const closeIcon = document.createElement("i");
+  closeIcon.classList.add("fa", "fa-times");
+  closeIcon.setAttribute("aria-hidden", "true");
+  closeButton.append(closeIcon);
+
+  // Append elements
+  container.append(heading, acceptButton, closeButton);
+  document.body.append(container);
+
+  // Add event listeners with return value for card deletion
+  acceptButton.addEventListener("click", () => {
+    return true;
+  });
+
+  closeButton.addEventListener("click", () => {
+    return false;
+  });
 }
