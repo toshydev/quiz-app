@@ -1,4 +1,4 @@
-import { renderCards, renderForm } from "./functions.js";
+import { renderCards, renderForm } from "../../utils/functions.js";
 
 // Check for darkmode in localStorage
 window.addEventListener("load", () => {
