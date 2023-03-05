@@ -44,14 +44,14 @@
   color: var(--color-dark);
 }
 
-.card__answer-container {
+/* .card__answer-container {
   margin: 1rem 0;
   width: 80%;
   height: 30%;
   background: var(--bg-answer);
   color: var(--color-dark);
   border-radius: 8px;
-}
+} */
 
 .card__answer-text {
   padding: 1rem;
@@ -74,4 +74,16 @@
   font-family: monospace;
   font-weight: bold;
   padding: 4px;
+}
+
+.card__answer-container input {
+  display: none;
+}
+
+.card__answer-container label {
+  background: grey;
+}
+
+.card__answer-container input[type="radio"]:checked + label {
+  background: deepskyblue;
 }
